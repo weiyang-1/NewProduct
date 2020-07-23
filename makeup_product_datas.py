@@ -7,6 +7,7 @@
 """
 
 
+from database.db_config import OriginalTestTable
 from database.mysql_tool import MysqlDb
 from units.simple_tools import gene_date_by_day
 
@@ -18,7 +19,7 @@ def get_product_id():
     获取所有 sku 型号
     :return:
     """
-    sql = 'select DISTINCT product_model from `sku_info`;'
+    sql = f'select DISTINCT product_model from `{OriginalTestTable}`;'
     m1.cursor.execute(sql)
     while True:
         res = m1.cursor.fetchone()
@@ -40,10 +41,9 @@ def make_products_data():
     # 使用update语句进行补充，避免产生多条重复数据
     for product_id in get_product_id():
         if isinstance(product_id, tuple):
-            search_sql = f"select * from sku_info where product_model='{product_id[0]}' order by update_time;"
+            search_sql = f"select * from `{OriginalTestTable}` where product_model='{product_id[0]}' order by update_time;"
             m.cursor.execute(search_sql)
             res_list = m.cursor.fetchall()
-
             for i in range(len(res_list)-1):
                 print(res_list[i])
                 product_model, brand_name, catalog, price, stock, update_time_before = res_list[i]
@@ -53,7 +53,7 @@ def make_products_data():
                 print(date_list)
                 if len(date_list) >= 2:
                     for date_next in date_list[1:]:
-                        insert_sql = f""" INSERT INTO `sku_info_copy` VALUES("{product_model}", "{brand_name}", "{catalog}", {price}, {stock}, "{date_next}");"""
+                        insert_sql = f""" INSERT INTO `{OriginalTestTable}` VALUES("{product_model}", "{brand_name}", "{catalog}", {price}, {stock}, "{date_next}");"""
                         print(insert_sql)
                         m.cursor.execute(insert_sql)
                         m.conn.commit()
