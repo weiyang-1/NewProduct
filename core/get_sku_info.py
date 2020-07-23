@@ -9,18 +9,19 @@
 import time
 from database.db_config import CalculationPeriod
 from database.mysql_tool import MysqlDb
+from database.db_config import FullTestTable
 
 
 m1 = MysqlDb()
 m2 = MysqlDb()
 
 
-def get_product_id():
+def get_product_id(table_name):
     """
     获取所有 sku 型号
     :return:
     """
-    sql = 'select DISTINCT product_model from `sku_more_infos`;'
+    sql = f'select DISTINCT product_model from `{table_name}`;'
     m1.cursor.execute(sql)
     while True:
         res = m1.cursor.fetchone()
@@ -39,14 +40,14 @@ def get_single_sku_info(product_model, start_date):
     if not product_model:
         return []
     product_model = product_model[0]
-    sql = f"select * from sku_more_infos where product_model='{product_model}' and update_time BETWEEN '{date_before}' and '{start_date}';"
+    sql = f"select * from `{FullTestTable}` where product_model='{product_model}' and update_time BETWEEN '{date_before}' and '{start_date}';"
     m2.cursor.execute(sql)
     res = m2.cursor.fetchall()
     return res
 
 
 def get_sku_infos(start_date):
-    for sku_id in get_product_id():
+    for sku_id in get_product_id(FullTestTable):
         res = get_single_sku_info(sku_id, start_date)
         yield sku_id[0], res
     m1.close()

@@ -29,15 +29,46 @@ Tcycle = [1, 7, 15, 30, 60, 90, 120]
 
 # sku信息测试原始数据表
 OriginalTestTable = "sku_info"
-
-# sku信息测试完整数据表
-FullTestTable = "sku_more_infos"
+"""
+| product_model     | brand_name | catalog | day_price | day_stock | update_time |
+| kajdwj001wkddkw	|     kajdk  | wkddk   | 1.35	   | 40	       | 2020-01-03  |
+| kajdwj001wkddkw	|     kajdk  | wkddk   | 1.35	   | 40	       | 2020-01-04  |
+| kajdwj001wkddkw	|     kajdk  | wkddk   | 1.35	   | 40	       | 2020-01-05  |
+"""
 
 # 搜索数据测试原始数据表
 OriginalSearchTestTable = "search_info"
+"""
+| product_model     | lc_search | lc_bom | jlc_bom | eda_person | eda_search | easy_bom | update_time |
+| kajdkwj001wkddkw	|     10	| 20	 | 30	   | 40	        |     50     | 60	    | 2020-01-03  |
+| kajdkwj001wkddkw	|     10	| 20	 | 30	   | 40	        |     50     | 60	    | 2020-01-04  |
+| kajdkwj001wkddkw	|     10	| 20	 | 30	   | 40	        |     50     | 60	    | 2020-01-05  |
+"""
+
+# sku信息测试完整数据表
+FullTestTable = "sku_more_infos"
+"""
+| product_model     | brand_name | catalog | day_sales_money | day_sales_count | day_price | day_stock | day_sales_stock_rate | day_stock_price | stock_change | price_change| sales_money_change | stock_money_change | sales_counts_change | average_stock_develop | average_stock_money_develop | average_price_develop | average_sales_counts_develop | uodate_time| 
+| kajdwj001wkddkw	|     kajdk  | wkddk   |      926.2	     | 7325            | 7.764     | 6124      | 9.84                 | 73759.8         | 7168.1       | 195.7       | 174.4              | 8085.6             | 483.3               | 3432.4                | 3169.7                      | 8182.9                | 206.7                        | 2020-01-03 | 
+| kajdwj001wkddkw	|     kajdk  | wkddk   |      924.2	     | 7324            | 7.764     | 6124      | 9.84                 | 73759.8         | 7168.1       | 195.7       | 174.4              | 8085.6             | 483.3               | 3432.4                | 3169.7                      | 8182.9                | 206.7                        | 2020-01-04 |  
+| kajdwj001wkddkw	|     kajdk  | wkddk   |      925.2	     | 7329            | 7.764     | 6124      | 9.84                 | 73759.8         | 7168.1       | 195.7       | 174.4              | 8085.6             | 483.3               | 3432.4                | 3169.7                      | 8182.9                | 206.7                        | 2020-01-05 | 
+"""
+
 
 # 搜索数据测试完整数据表
 FullSearchTestTable = "search_infos"
+"""
+| product_model     | search_counts | update_time |
+| kajdkwj001wkddkw	|     100	    | 2020-01-03  |
+| kajdkwj001wkddkw	|     110	    | 2020-01-04  |
+| kajdkwj001wkddkw	|     120	    | 2020-01-05  |
+"""
 
 # sku测试结果数据表
 FinalResultTestTable = "final_result"
+"""
+| product_model     | final_marks   | update_time |
+| kajdkwj001wkddkw	|     0.121245  | 2020-01-03  |
+| kajdkwj001wkddkw	|     0.542235  | 2020-01-04  |
+| kajdkwj001wkddkw	|     0.784512  | 2020-01-05  |
+"""

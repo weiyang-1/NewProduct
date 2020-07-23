@@ -3,7 +3,8 @@
   <component name="ChangeListManager">
     <list default="true" id="79a792ff-ad36-4056-ae85-6bfdc33b7134" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/gene_product_datas.py" beforeDir="false" afterPath="$PROJECT_DIR$/gene_product_datas.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/get_sku_info.py" beforeDir="false" afterPath="$PROJECT_DIR$/core/get_sku_info.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/db_config.py" beforeDir="false" afterPath="$PROJECT_DIR$/database/db_config.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/makeup_product_datas.py" beforeDir="false" afterPath="$PROJECT_DIR$/makeup_product_datas.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -96,7 +97,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1595490380977</updated>
-      <workItem from="1595490382152" duration="682000" />
+      <workItem from="1595490382152" duration="5695000" />
     </task>
     <servers />
   </component>
@@ -115,7 +116,7 @@
     </option>
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
-    <SUITE FILE_PATH="coverage/NewProduct$run.coverage" NAME="run Coverage Results" MODIFIED="1595490556071" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
-    <SUITE FILE_PATH="coverage/NewProduct$makeup_product_datas.coverage" NAME="makeup_product_datas Coverage Results" MODIFIED="1595491255543" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/NewProduct$run.coverage" NAME="run Coverage Results" MODIFIED="1595496301074" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/NewProduct$makeup_product_datas.coverage" NAME="makeup_product_datas Coverage Results" MODIFIED="1595496619526" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
   </component>
 </project>
