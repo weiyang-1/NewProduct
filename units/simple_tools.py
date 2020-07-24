@@ -25,5 +25,5 @@ def gene_date_by_day(day_begin, day_end):
 
 
 if __name__ == '__main__':
-    r = gene_date_by_day("2020-02-23", "2020-03-23")
+    r = gene_date_by_day("2020-02-23", "2020-02-24")
     print(r)

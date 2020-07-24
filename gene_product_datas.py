@@ -52,8 +52,9 @@ def insert_products_data():
             average_stock_money_develop = random.randint(1, 100000)*0.1
             average_price_develop = random.randint(1, 100000)*0.1
             average_sales_counts_develop = random.randint(1, 100000)*0.1
+            average_sales_money_develop = random.randint(1, 100000) * 0.1
             # 执行插入数据库操作
-            sql = f""" INSERT INTO `{FullTestTable}` VALUES("{product_model}", "{brand_name}", "{catalog}", {day_sales_money}, {day_sales_count}, {day_price}, {day_stock}, {day_sales_stock_rate}, {day_stock_price}, {stock_change}, {price_change}, {sale_money_change}, {stock_money_change}, {sales_counts_change}, {average_stock_develop}, {average_stock_money_develop},{average_price_develop},{average_sales_counts_develop}, "{date_time}");"""
+            sql = f""" INSERT INTO `{FullTestTable}` VALUES("{product_model}", "{brand_name}", "{catalog}", {day_sales_money}, {day_sales_count}, {day_price}, {day_stock}, {day_sales_stock_rate}, {day_stock_price}, {stock_change}, {price_change}, {sale_money_change}, {stock_money_change}, {sales_counts_change}, {average_stock_develop}, {average_stock_money_develop},{average_price_develop},{average_sales_counts_develop}, {average_sales_money_develop},"{date_time}");"""
             print(f"sql is:{sql}")
             m.cursor.execute(sql)
             m.conn.commit()
